@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>BC. 3DVISION</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#050505;
+--text:#f4eee4;
+--accent:#c6a46b;
+--muted:#8f8779;
+--line:rgba(255,255,255,.06);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:Inter,sans-serif;
+overflow-x:hidden;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(1480px,94%);
+margin:auto;
+}
+
+section{
+padding:140px 0;
+position:relative;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+}
+
+.hero-grid{
+position:absolute;
+inset:0;
+background-image:
+linear-gradient(var(--line) 1px, transparent 1px),
+linear-gradient(90deg,var(--line) 1px, transparent 1px);
+background-size:120px 120px;
+opacity:.18;
+pointer-events:none;
+}
+
+.orb{
+position:absolute;
+right:8%;
+top:12%;
+width:540px;
+height:540px;
+border-radius:50%;
+background:
+radial-gradient(circle at center,
+rgba(198,164,107,.22),
+transparent 65%);
+filter:blur(18px);
+}
+
+.hero-content{
+position:relative;
+z-index:3;
+max-width:760px;
+}
+
+.kicker{
+font-size:.72rem;
+letter-spacing:.28em;
+text-transform:uppercase;
+color:var(--accent);
+margin-bottom:2rem;
+}
+
+.hero h1{
+font-family:'Instrument Serif',serif;
+font-size:clamp(4.8rem,12vw,10rem);
+font-weight:400;
+line-height:.88;
+letter-spacing:-.03em;
+}
+
+.hero h1 span:last-child{
+color:var(--accent);
+}
+
+.hero p{
+margin-top:2rem;
+max-width:520px;
+font-size:1rem;
+line-height:1.8;
+color:var(--muted);
+}
+
+.button{
+display:inline-block;
+margin-top:2rem;
+padding:14px 28px;
+border:1px solid var(--accent);
+font-size:.78rem;
+letter-spacing:.18em;
+text-transform:uppercase;
+transition:.35s;
+}
+
+.button:hover{
+background:var(--accent);
+color:#111;
+}
+
+.section-title{
+font-family:'Instrument Serif',serif;
+font-size:clamp(2.5rem,5vw,4rem);
+font-weight:400;
+margin-bottom:4rem;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:22px;
+}
+
+.gallery-stack{
+display:grid;
+gap:22px;
+}
+
+.gallery-row{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+margin-top:22px;
+}
+
+.gallery-wide{
+margin-top:22px;
+}
+
+.gallery-item{
+position:relative;
+overflow:hidden;
+background:#111;
+}
+
+.gallery-item img{
+transition:transform .8s ease;
+}
+
+.gallery-item:hover img{
+transform:scale(1.03);
+}
+
+.overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:2rem;
+background:linear-gradient(to top, rgba(0,0,0,.7), transparent);
+opacity:0;
+transition:.4s;
+font-size:.9rem;
+letter-spacing:.08em;
+}
+
+.gallery-item:hover .overlay{
+opacity:1;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:26px;
+}
+
+video{
+width:100%;
+display:block;
+background:#000;
+}
+
+.contact{
+padding:180px 0;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:start;
+border-top:1px solid var(--line);
+}
+
+.contact h2{
+font-family:'Instrument Serif',serif;
+font-size:clamp(3rem,6vw,5rem);
+font-weight:400;
+}
+
+.contact p{
+margin-top:1rem;
+color:var(--muted);
+line-height:1.8;
+max-width:500px;
+}
+
+.contact-list{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-list a{
+color:var(--muted);
+transition:.3s;
+}
+
+.contact-list a:hover{
+color:var(--accent);
+}
+
+footer{
+padding:40px 0;
+font-size:.75rem;
+color:var(--muted);
+border-top:1px solid var(--line);
+display:flex;
+justify-content:space-between;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1s ease;
+}
+
+.reveal.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:991px){
+
+.hero{
+padding-top:80px;
+}
+
+.orb{
+width:300px;
+height:300px;
+right:-60px;
+top:80px;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-row{
+grid-template-columns:1fr;
+}
+
+.video-grid{
+grid-template-columns:1fr;
+}
+
+.contact{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+section{
+padding:90px 0;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-grid"></div>
+<div class="orb"></div>
+
+<div class="container hero-content">
+
+<div class="kicker">Architectural Visualization Studio</div>
+
+<h1>
+<span>BC.</span><br>
+<span>3DVISION</span>
+</h1>
+
+<p>
+Photorealistic architectural visualization crafted through atmosphere,
+composition and detail — for architects, designers and developers worldwide.
+</p>
+
+<a href="#portfolio" class="button">View Projects</a>
+
+</div>
+</section>
+
+<section id="portfolio" class="container reveal">
+
+<div class="kicker">Selected Works</div>
+<h2 class="section-title">Recent Renders</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img src="img/daylight 1.png" alt="">
+<div class="overlay">Residential Exterior Visualization</div>
+</div>
+
+<div class="gallery-stack">
+
+<div class="gallery-item">
+<img src="img/1 (5).png" alt="">
+<div class="overlay">Soft Interior Light Study</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="gallery-row">
+
+<div class="gallery-item">
+<img src="img/2 (5).png" alt="">
+<div class="overlay">Interior Atmosphere</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/160000.png" alt="">
+<div class="overlay">Workspace CGI</div>
+</div>
+
+<div class="gallery-item">
+<img src="img/190000.png" alt="">
+<div class="overlay">Bedroom Concept</div>
+</div>
+
+</div>
+
+<div class="gallery-wide gallery-item">
+<img src="img/5 (2).png" alt="">
+<div class="overlay">Classic Living Space</div>
+</div>
+
+</section>
+
+<section class="container reveal">
+
+<div class="video-grid">
+
+<div>
+<video autoplay muted loop playsinline>
+<source src="img/10000_1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+<video autoplay muted loop playsinline>
+<source src="img/10000_14.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+
+</section>
+
+<section class="container contact reveal">
+
+<div>
+<div class="kicker">Contact</div>
+<h2>Design is feeling.</h2>
+
+<p>
+Available for commissions, collaborations and architectural visualization projects worldwide.
+Let’s create imagery that feels atmospheric, timeless and memorable.
+</p>
+</div>
+
+<div class="contact-list">
+<a href="mailto:hello@bc3dvision.com">hello@bc3dvision.com</a>
+<a href="#">Instagram</a>
+<a href="#">Behance</a>
+<a href="#">Kyiv — Worldwide</a>
+</div>
+
+</section>
+
+<footer class="container">
+<div>© BC. 3DVISION</div>
+<div>Architectural Visualization Studio</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+},{threshold:0.15});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+observer.observe(el);
+});
+</script>
+
+</body>
+</html>

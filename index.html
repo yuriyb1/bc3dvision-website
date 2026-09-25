@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BC.3DVISION — 3D Visualization Studio</title>
+<link rel="shortcut icon" href="img/BC.jpg" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor">
+  <div class="dot"></div>
+  <div class="ring"></div>
+</div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">BC.3DVISION</a>
+  <ul class="nav-links">
+    <li><a href="#gallery">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content">
+    <p class="hero-label">3D Visualization Studio</p>
+    <h1>BC.<br><p>3DVISION</p></h1>
+    <p class="hero-intro">
+      Your project sells before construction begins. BC3DVision creates 3D visualizations of interiors, exteriors, and products — detailed enough for clients to see materials, lighting direction, and atmosphere. No “imagine it” — only a final image that communicates clearly and convinces.
+    </p>
+    <a href="#gallery" class="hero-cta">
+      View Work
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
+        <path d="M1 5h14M10 1l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery">
+  <div class="section-label">Selected Work</div>
+  <div class="gallery-header reveal">
+    <h2 class="gallery-title">Recent<br><em>Renders</em></h2>
+  </div>
+  <div class="gallery-carousel reveal" aria-label="Selected renders carousel">
+    <div class="gallery-track">
+
+    <div class="gallery-item">
+      <img src="img/daylight 1.png" alt="Render 1">
+      <div class="overlay"><span class="overlay-label">Rend 1</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/8.jpg" alt="Render 2">
+      <div class="overlay"><span class="overlay-label">Rend 2</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/2.jpg" alt="Render 3">
+      <div class="overlay"><span class="overlay-label">Rend 3</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/190000.png" alt="Render 5">
+      <div class="overlay"><span class="overlay-label">Rend 5</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/5 (2).png" alt="Render 6">
+      <div class="overlay"><span class="overlay-label">Rend 6</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/3.jpg" alt="Render 7">
+      <div class="overlay"><span class="overlay-label">Rend 7</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/4.jpg" alt="Render 8">
+      <div class="overlay"><span class="overlay-label">Rend 8</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/5.jpg" alt="Render 9">
+      <div class="overlay"><span class="overlay-label">Rend 9</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/7.jpg" alt="Render 10">
+      <div class="overlay"><span class="overlay-label">Rend 10</span></div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="img/1.jpg" alt="Render 11">
+      <div class="overlay"><span class="overlay-label">Rend 11</span></div>
+    </div>
+
+    </div>
+    <div class="gallery-controls" aria-label="Carousel controls">
+      <div class="gallery-dots" aria-label="Choose slide"></div>
+      <div class="gallery-arrows">
+        <button class="gallery-btn gallery-prev" type="button" aria-label="Previous render">
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true">
+            <path d="M16 6H2M6.5 1.5L2 6l4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="gallery-btn gallery-next" type="button" aria-label="Next render">
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true">
+            <path d="M1 6h14M10.5 1.5L15 6l-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Videos -->
+<section id="videos">
+  <div class="section-label">Motion Work</div>
+  <div class="gallery-header reveal">
+    <h2 class="gallery-title">Recent<br><em>Videos</em></h2>
+  </div>
+  <div class="video-carousel reveal" aria-label="Selected videos carousel">
+    <div class="video-track">
+      <div class="video-item">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="img/10000_1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-item">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="img/10000_14.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-item">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="img/animation.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-item">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="img/20000.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="gallery-controls" aria-label="Video carousel controls">
+      <div class="video-dots gallery-dots" aria-label="Choose video"></div>
+      <div class="gallery-arrows">
+        <button class="gallery-btn video-prev" type="button" aria-label="Previous video">
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true">
+            <path d="M16 6H2M6.5 1.5L2 6l4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="gallery-btn video-next" type="button" aria-label="Next video">
+          <svg width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true">
+            <path d="M1 6h14M10.5 1.5L15 6l-4.5 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="about-left">
+    <div class="section-label reveal">About</div>
+    <h2 class="about-title reveal">Design is<br><em>feeling.</em></h2>
+    <p class="about-body reveal">
+      We are Yuriy and Alina. Since 2023, we have been working together as a creative team. In 2025, we formed BC.3Dvision — our studio dedicated to high-end architectural visualization.
+    </p>
+    <p class="about-body reveal" style="transition-delay:.1s">
+      We create photorealistic visuals for interiors, exteriors, and architectural concepts using professional 3D workflows, with a strong focus on light, composition, and atmosphere. Our goal is simple — to translate design into imagery that feels clear, emotional, and alive.
+    </p>
+    <p class="about-body reveal" style="transition-delay:.15s">
+      Over the years, we have collaborated with architects, designers, and studios across Ukraine, Poland, Germany, and Spain — from residential interiors to large-scale architectural developments.
+    </p>
+    <p class="about-body reveal" style="transition-delay:.2s; font-style: italic; color: var(--accent); opacity: 0.85;">
+      We don't just visualize spaces. We shape how they are felt and understood.
+    </p>
+    <div class="about-portrait reveal" style="transition-delay:.15s">
+      <img src="img/founders.jpg" alt="BC.3Dvision founders Yuriy and Alina">
+    </div>
+  </div>
+
+  <div class="about-right">
+    <div class="section-label reveal">Tools &amp; Skills</div>
+    <div class="skills-list reveal">
+      <div class="skill-row">
+        <span class="skill-name">3ds Max</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-w="99"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Photoshop</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-w="99"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">AI Tools</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-w="99"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Compositions</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-w="99"></div></div>
+      </div>
+      <div class="skill-row">
+        <span class="skill-name">Emotions</span>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-w="99"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-label reveal" style="justify-content:center">Get in Touch</div>
+    <h2 class="contact-title reveal">Let's<br><em>create.</em></h2>
+    <p class="contact-sub reveal">
+      Available for commissions, collaborations, and commercial projects.
+    </p>
+    <div class="contact-links reveal">
+      <a href="mailto:bc3dvision@gmail.com" class="contact-link">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none">
+          <rect x=".75" y=".75" width="13.5" height="10.5" rx="1.25" stroke="currentColor" stroke-width="1.1"/>
+          <path d="M.75 2.5l6.75 4.5 6.75-4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        </svg>
+        bc3dvision@gmail.com
+      </a>
+      <a href="https://instagram.com/bc3dvision" target="_blank" class="contact-link">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <rect x=".75" y=".75" width="12.5" height="12.5" rx="3.25" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="7" cy="7" r="2.75" stroke="currentColor" stroke-width="1.1"/>
+          <circle cx="10.5" cy="3.5" r=".65" fill="currentColor"/>
+        </svg>
+        Instagram
+      </a>
+     <a href="https://www.behance.net/bcvisionbc" target="_blank" class="contact-link">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+    <path d="M4 7H10C12 7 13 8 13 9.5C13 11 12 12 10 12H4V7Z"
+      stroke="currentColor" stroke-width="1.5"/>
+    <path d="M4 12H10C12.5 12 13.5 13 13.5 14.5C13.5 16.5 12 17 10 17H4V12Z"
+      stroke="currentColor" stroke-width="1.5"/>
+    <path d="M16 12.5H20C20 10.5 19 9 17.5 9C16 9 15 10.5 15 13C15 15.5 16 17 18 17C19.2 17 20 16.5 20.5 15.5"
+      stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M16 6H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+  Behance
+</a>
+</a>
+<a href="https://t.me/baraev_yuriy" target="_blank" class="contact-link">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+    <path d="M21 4L3 11L10 13L12 20L21 4Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linejoin="round"/>
+    <path d="M10 13L21 4"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"/>
+  </svg>
+  Telegram Yurii
+</a>
+<a href="https://t.me/Alina_kalestina" target="_blank" class="contact-link">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+    <path d="M21 4L3 11L10 13L12 20L21 4Z"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linejoin="round"/>
+    <path d="M10 13L21 4"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"/>
+  </svg>
+  Telegram Alina
+</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <span class="footer-copy">© 2026 BC.3Dvision — All rights reserved</span>
+  <span class="footer-copy">3D Visualization Studio</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
